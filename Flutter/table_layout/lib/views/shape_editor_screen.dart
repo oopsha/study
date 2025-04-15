@@ -39,16 +39,13 @@ class _ShapeEditorScreenState extends ConsumerState<ShapeEditorScreen> {
           IconButton(
             icon: const Icon(Icons.add_box),
             onPressed: () {
-              final newShape = ShapeModel(
-                id: DateTime.now().millisecondsSinceEpoch.toString(),
-                type: 'rectangle',
-                x: 50,
-                y: 50,
-                width: 100,
-                height: 100,
-                color: Colors.blue.value,
-              );
-              ref.read(shapeListProvider.notifier).addShape(newShape);
+              ref.read(shapeListProvider.notifier).addShape(ShapeModel.basicRectangle());
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.remove_circle),
+            onPressed: () {
+              ref.read(shapeListProvider.notifier).removeShape(_selectedShape.id);
             },
           ),
         ],

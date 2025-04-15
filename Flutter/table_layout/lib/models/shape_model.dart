@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
+
 class ShapeModel {
   final String id;
-  final String type; // rectangle, circle 등
+  final String type;
   final double x;
   final double y;
   final double width;
@@ -20,6 +22,16 @@ class ShapeModel {
     this.strokeWidth = 2.0,
     this.isSelected = false,
   });
+
+  factory ShapeModel.basicRectangle() => ShapeModel(
+    id: DateTime.now().millisecondsSinceEpoch.toString(),
+    type: 'rectangle',
+    x: 50,
+    y: 50,
+    width: 200,
+    height: 150,
+    color: Colors.orange.toARGB32(),
+  );
 
   factory ShapeModel.fromJson(Map<String, dynamic> json) => ShapeModel(
         id: json['id'],
