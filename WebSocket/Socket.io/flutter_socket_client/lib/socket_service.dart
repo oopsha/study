@@ -1,12 +1,14 @@
-import 'package:socket_io_client/socket_io_client.dart' as IO;
+import 'package:flutter/foundation.dart';
+import 'package:socket_io_client/socket_io_client.dart' as socket_io_client;
 
 class SocketService {
-  late IO.Socket _socket;
+  late socket_io_client.Socket _socket;
 
   void connect({required String companyCode, required String storeCode}) {
-    _socket = IO.io(
-      'http://58.72.109.3:8200',
-      IO.OptionBuilder()
+    _socket = socket_io_client.io(
+      'http://localhost:8200',
+      // 'http://58.72.109.3:8200',
+      socket_io_client.OptionBuilder()
           .setTransports(['websocket'])
           .setQuery({'companyCode': companyCode, 'storeCode': storeCode})
           .disableAutoConnect()
@@ -16,20 +18,28 @@ class SocketService {
     _socket.connect();
 
     _socket.onConnect((_) {
-      print('✅ Connected');
+      debugPrint('✅ Connected');
     });
 
-    _socket.on('kds-update', (data) {
-      print('📥 Message: $data');
+    _socket.on('order-new', (data) {
+      debugPrint('📥 order-new, Message: $data');
+    });
+
+    _socket.on('order-complete', (data) {
+      debugPrint('📥 order-complete, Message: $data');
     });
 
     _socket.onDisconnect((_) {
-      print('❌ Disconnected');
+      debugPrint('❌ Disconnected');
     });
   }
 
   void sendMessage(Map<String, dynamic> data) {
-    _socket.emit('pos-message', data);
+    final payload = {
+      'eventName': 'order-new',
+      'data': data,
+    };
+    _socket.emit('event', payload);
   }
 
   void disconnect() {
