@@ -1,0 +1,15 @@
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\bin\Debug\HelloWPFApp.exe.config
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\bin\Debug\HelloWPFApp.exe
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\bin\Debug\HelloWPFApp.pdb
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp.csprojAssemblyReference.cache
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\Greetings.g.cs
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\App.g.cs
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp_MarkupCompile.cache
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp_MarkupCompile.lref
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\Greetings.baml
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp.g.resources
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp.Properties.Resources.resources
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp.csproj.GenerateResource.cache
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp.csproj.CoreCompileInputs.cache
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp.exe
+D:\Study\WPF\HelloWPFApp\HelloWPFApp\obj\Debug\HelloWPFApp.pdb
