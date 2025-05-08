@@ -46,3 +46,16 @@ app.*.map.json
 
 # FVM Version Cache
 .fvm/
+
+# macOS 시스템에서 자동 생성되는 파일 무시
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Finder 관련 파일 무시
+Icon?
+._*
+
+# macOS에서 네트워크 드라이브 접속 시 생성되는 파일 무시
+.Spotlight-V100
+.Trashes

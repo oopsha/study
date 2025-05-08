@@ -26,21 +26,45 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      body: Row(
-        children: [
-          const Spacer(),
-          Container(
-            color: Colors.purple.withValues(alpha: 0.12),
-            width: 1080,
-            child: Column(
-              children: [
-                const SizedBox(height: 24),
-                _buildRoomStatusHeader(ref),
-              ]
-            ),
-          ),
-          const Spacer(),
-        ]
+      body: Scrollbar(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 1024),
+                child: Row(
+                  children: [
+                    const SizedBox(height: 24),
+                    _buildRoomStatusHeader(ref),
+                    _buildRoomStatusHeader(ref),
+                    _buildRoomStatusHeader(ref),
+                    _buildRoomStatusHeader(ref),
+                    _buildRoomStatusHeader(ref),
+                    _buildRoomStatusHeader(ref),
+                  ]
+                ),
+              ),
+            ],
+          )
+          // child: Row(
+          //   children: [
+          //     // const Spacer(),
+          //     Container(
+          //       color: Colors.purple.withValues(alpha: 0.12),
+          //       width: 1080,
+          //       child: Column(
+          //         children: [
+          //           const SizedBox(height: 24),
+          //           _buildRoomStatusHeader(ref),
+          //         ]
+          //       ),
+          //     ),
+          //     // const Spacer(),
+          //   ]
+          // ),
+        ),
       )
     );
   }
