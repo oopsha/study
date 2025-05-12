@@ -6,8 +6,8 @@ class SocketService {
 
   void connect({required String companyCode, required String storeCode}) {
     _socket = socket_io_client.io(
-      'http://localhost:8200',
-      // 'http://58.72.109.3:8200',
+      // 'http://localhost:8200',
+      'http://58.72.109.3:8200',
       socket_io_client.OptionBuilder()
           .setTransports(['websocket'])
           .setQuery({'companyCode': companyCode, 'storeCode': storeCode})
