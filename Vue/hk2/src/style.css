@@ -1,0 +1,380 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/   v2.0 | 20110126 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 128bit reset */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* RMS color */
+/* 128bit reset */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Default Style */
+html, body {
+  height: 100%;
+}
+
+html, body, button, input[type="submit"], input[type="button"], textarea, a, input, select {
+  font-family: "맑은 고딕","Malgun Gothic",맑은고딕,돋움,Dotum,sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 180%;
+}
+
+body {
+  background: #eceef6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #aaa;
+  background: #ddd;
+  text-align: center;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.sample_desc {
+  position: absolute;
+  right: 0;
+  font-size: 11px;
+  color: #777;
+}
+
+.header {
+  height: 265px;
+  width: 100%;
+}
+
+.header h1 {
+  margin-top: 20px;
+  left: 10px;
+  position: absolute;
+  width: 114px;
+  height: 45px;
+  display: block;
+}
+
+.header h1 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(../images/top_logo.png) no-repeat;
+  text-indent: -9999px;
+}
+
+.footer {
+  background: #262626;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer .copyright {
+  font-size: 12px;
+  color: #999;
+  margin: 10px 0;
+  line-height: 220%;
+}
+
+.inner {
+  width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+#typerdo {
+  display: block;
+  text-align: center;
+  margin: 0 auto 15px;
+  padding-top: 15px;
+}
+
+#typerdo li {
+  display: inline-block;
+  margin: 7px;
+}
+
+#typerdo input[type=radio] {
+  display: none;
+}
+
+#typerdo label {
+  display: block;
+  font-size: 14px;
+  width: 133px;
+  height: 74px;
+  padding: 8px 0 0 50px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 10px;
+  color: #333;
+  position: relative;
+  background: white;
+  transition: 200ms all;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#typerdo label:hover {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  padding-left: 55px;
+}
+
+#typerdo label:hover:after {
+  width: 36px;
+}
+
+#typerdo label:after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 200ms width;
+  z-index: 1;
+}
+
+#typerdo label span {
+  position: absolute;
+  z-index: 2;
+}
+
+#typerdo label .type_cnt {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  display: block;
+  margin-top: 25px;
+}
+
+#typerdo input[type=radio]:checked + label {
+  padding-left: 20px;
+}
+
+#typerdo input[type=radio]:checked + label span {
+  color: white;
+}
+
+#typerdo input[type=radio]:checked + label:after {
+  width: 100%;
+}
+
+#typerdo #typerdo_0 + label:after {
+  background: #bbb;
+}
+
+#typerdo #typerdo_1 + label:after {
+  background: #3a4359;
+}
+
+#typerdo #typerdo_2 + label:after {
+  background: #00b0ff;
+}
+
+#typerdo #typerdo_3 + label:after {
+  background: #ffc107;
+}
+
+#typerdo #typerdo_4 + label:after {
+  background: #4cdb09;
+}
+
+#typerdo #typerdo_5 + label:after {
+  background: #ff5656;
+}
+
+#typerdo #typerdo_6 + label:after {
+  background: #7a7fca;
+}
+
+.villa_list {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.villa_list h3 {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3a4359;
+}
+
+.villa_list ul {
+  width: 510px;
+  height: 44px;
+  padding: 5px 0 5px 45px;
+  margin: 5px 10px;
+  position: relative;
+  background: white;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.villa_list ul li {
+  display: inline-block;
+  margin: 2px;
+}
+
+.villa_list ul li a {
+  width: 46px;
+  padding: 2px 0;
+  display: block;
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  transition: 200ms box-shadow;
+  cursor: pointer;
+  position: relative;
+}
+
+.villa_list ul li a:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.villa_list ul li .A {
+  background: #bbb;
+}
+
+.villa_list ul li .B {
+  background: #3a4359;
+}
+
+.villa_list ul li .C {
+  background: #00b0ff;
+}
+
+.villa_list ul li .D {
+  background: #ffc107;
+}
+
+.villa_list ul li .E {
+  background: #4cdb09;
+}
+
+.villa_list ul li .F {
+  background: #ff5656;
+}
+
+.villa_list ul li .G {
+  background: #7a7fca;
+}
+
+.group_layer_dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: none;
+}
+
+.group_layer {
+  position: absolute;
+  background: white;
+  width: 230px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 0;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.group_layer h3 {
+  font-size: 14px;
+  margin-bottom: 7px;
+  color: #333;
+  font-weight: bold;
+}
+
+.group_layer li {
+  display: inline-block;
+  margin: 1px 1px 0 1px;
+  width: 40px;
+}
+
+.group_layer a {
+  background: #eee;
+  display: block;
+  width: 100%;
+  padding: 3px 0;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #666;
+}
+
+.group_layer a:hover {
+  background: #00b0ff;
+  color: white;
+}
+
+#changebtn {
+  position: absolute;
+}
