@@ -10,7 +10,7 @@
           v-model="selectedType"
         />
         <label :for="'typerdo_' + idx">
-          {{ t.label }}
+          <span class="type_name">{{ t.label }}</span>
           <span class="type_cnt">{{ roomCounts[t.value] }}</span>
         </label>
       </li>
@@ -30,6 +30,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
+import type { Room } from '../types/room'
 import { getRooms, updateRoomStatus } from '../api/roomService'
 
 const roomTypes = [
@@ -42,15 +43,15 @@ const roomTypes = [
   { value: 'G', label: '점검완료' }
 ]
 
-const rooms = ref([])
+const rooms = ref<Room[]>([])
 const selectedType = ref('A')
 
 const filteredRooms = computed(() =>
   rooms.value.filter(r => r.status === selectedType.value)
 )
 
-const roomCounts = computed(() => {
-  return roomTypes.reduce((acc, t) => {
+const roomCounts = computed<Record<string, number>>(() => {
+  return roomTypes.reduce((acc: Record<string, number>, t) => {
     acc[t.value] = rooms.value.filter(r => r.status === t.value).length
     return acc
   }, {})
@@ -60,7 +61,7 @@ const loadRooms = async () => {
   rooms.value = await getRooms()
 }
 
-const changeStatus = async (room) => {
+const changeStatus = async (room: Room) => {
   const nextStatus = prompt(`상태 변경 (현재: ${room.status})`, room.status)
   if (nextStatus && nextStatus !== room.status) {
     await updateRoomStatus(room.id, nextStatus)
