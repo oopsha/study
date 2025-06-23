@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import RoomList from './components/RoomList.vue'
+import RoomOverview from '@/components/RoomOverview.vue'
 </script>
 
 <template>
   <div id="app">
-    <RoomList />
+    <RoomOverview />
   </div>
 </template>
 
