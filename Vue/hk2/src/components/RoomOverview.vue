@@ -116,6 +116,11 @@ const changeStatus = async (room: RoomDto) => {
         return
     }
 
+    if (!['A', 'B', 'C'].includes(room.roomStat)) {
+        alert('퇴실예정, 퇴실완료, 청소중인 객실만 변경할 수 있습니다.')
+        return
+    }
+
     try {
         await updateRoomStatus({ ...room, roomStat: selectedType.value })
         await loadOverview();
