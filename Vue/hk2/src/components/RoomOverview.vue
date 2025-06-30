@@ -116,8 +116,8 @@ const changeStatus = async (room: RoomDto) => {
         return
     }
 
-    if (!['A', 'B', 'C'].includes(room.roomStat)) {
-        alert('퇴실예정, 퇴실완료, 청소중인 객실만 변경할 수 있습니다.')
+    if (!['A', 'B', 'C', 'D'].includes(room.roomStat)) {
+        alert('퇴실예정, 퇴실완료, 청소중, 청소완료인 객실만 변경할 수 있습니다.')
         return
     }
 
@@ -133,7 +133,8 @@ let intervalId: ReturnType<typeof setInterval> | null = null
 
 onMounted(() => {
   loadOverview()
-  intervalId = setInterval(loadOverview, 30000) // 30초마다 새로고침
+//   intervalId = setInterval(loadOverview, 30000) // 30초마다 새로고침
+  intervalId = setInterval(loadOverview, 5000) // 5초마다 새로고침
 })
 
 onUnmounted(() => {
