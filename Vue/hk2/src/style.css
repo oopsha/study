@@ -242,11 +242,11 @@ strong {
 }
 
 #typerdo #typerdo_5 + label:after {
-  background: #ff5656;
+  background: #7a7fca;
 }
 
 #typerdo #typerdo_6 + label:after {
-  background: #7a7fca;
+  background: #ff5656;
 }
 
 .villa_list {
@@ -317,11 +317,11 @@ strong {
 }
 
 .villa_list ul li .F {
-  background: #ff5656;
+  background: #7a7fca;
 }
 
 .villa_list ul li .G {
-  background: #7a7fca;
+  background: #ff5656;
 }
 
 .group_layer_dim {

@@ -53,8 +53,8 @@ const roomTypes = [
     { value: 'C', label: '청소중' },
     { value: 'D', label: '청소완료' },
     { value: 'E', label: '재실' },
-    { value: 'F', label: '고장' },
-    { value: 'G', label: '점검요청' },
+    { value: 'F', label: '연박' },
+    { value: 'G', label: '고장' },
 ]
 
 const selectedType = ref('C')
@@ -133,8 +133,8 @@ let intervalId: ReturnType<typeof setInterval> | null = null
 
 onMounted(() => {
   loadOverview()
-//   intervalId = setInterval(loadOverview, 30000) // 30초마다 새로고침
-  intervalId = setInterval(loadOverview, 5000) // 5초마다 새로고침
+  intervalId = setInterval(loadOverview, 300000) // 5분마다 새로고침
+//   intervalId = setInterval(loadOverview, 5000) // 5초마다 새로고침
 })
 
 onUnmounted(() => {
