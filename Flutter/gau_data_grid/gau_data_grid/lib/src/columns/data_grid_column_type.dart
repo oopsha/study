@@ -1,0 +1,4 @@
+enum DataGridColumnType {
+  text,
+  number,
+}
