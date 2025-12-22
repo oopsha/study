@@ -133,8 +133,8 @@ let intervalId: ReturnType<typeof setInterval> | null = null
 
 onMounted(() => {
   loadOverview()
-  intervalId = setInterval(loadOverview, 300000) // 5분마다 새로고침
-//   intervalId = setInterval(loadOverview, 5000) // 5초마다 새로고침
+  const interval = import.meta.env.MODE === 'production' ? 5000 : 300000
+  intervalId = setInterval(loadOverview, interval)
 })
 
 onUnmounted(() => {
