@@ -1,0 +1,3 @@
+class SelectionModel {
+  int? selectedIndex;
+}

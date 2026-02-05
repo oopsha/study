@@ -1,0 +1,4 @@
+enum SelectionBehavior {
+  single,
+  multi,
+}
